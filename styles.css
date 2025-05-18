@@ -1,42 +1,127 @@
-body {
-  font-family: Arial, sans-serif;
+/* Base Styles */
+* {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
 header {
-  background-color: #333;
+  background: linear-gradient(to right, #4b6cb7, #182848);
   color: white;
-  padding: 2em;
+  padding: 3em 1em;
   text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+}
+
+header p {
+  font-size: 1.2em;
+  margin-bottom: 1em;
 }
 
 .btn {
-  display: inline-block;
-  padding: 0.6em 1.2em;
-  margin-top: 1em;
-  background-color: #007acc;
+  padding: 0.7em 1.5em;
+  background-color: #ff6f61;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 }
 
+.btn:hover {
+  background-color: #e94e3c;
+}
+
+/* Sections */
 section {
-  padding: 2em;
-  max-width: 800px;
+  padding: 2.5em 1em;
+  max-width: 900px;
   margin: auto;
+  background-color: white;
+  margin-bottom: 1.5em;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.projects .project {
+section h2 {
+  color: #333;
+  margin-bottom: 1em;
+  border-bottom: 3px solid #ff6f61;
+  display: inline-block;
+  padding-bottom: 0.3em;
+}
+
+/* Lists */
+.skills ul,
+.contact p {
+  padding-left: 1.5em;
+}
+
+.skills li {
+  background: #f1f1f1;
+  margin: 0.4em 0;
+  padding: 0.5em;
+  border-left: 5px solid #4b6cb7;
+  border-radius: 5px;
+}
+
+/* Projects */
+.project {
   margin-bottom: 1.5em;
 }
 
+.project h3 {
+  color: #4b6cb7;
+}
+
+.project a {
+  color: #ff6f61;
+  text-decoration: none;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Contact */
+.contact a {
+  color: #4b6cb7;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
 footer {
   text-align: center;
-  padding: 1em;
-  background-color: #ddd;
-  margin-top: 2em;
+  padding: 1.5em;
+  background-color: #182848;
+  color: white;
+  font-size: 0.9em;
+  border-top: 5px solid #ff6f61;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  section {
+    padding: 1.5em;
+  }
 }
