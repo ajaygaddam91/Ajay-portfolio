@@ -1,184 +1,143 @@
 /* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f7f7f7;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f9fc;
   color: #333;
-}
-
-h1, h2, h3 {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-  color: #4a90e2;
-}
-
-a:hover {
-  color: #1c6bcd;
+  line-height: 1.6;
 }
 
 /* Header */
-header {
+.hero {
+  text-align: center;
   background: linear-gradient(90deg, #4a90e2, #1c6bcd);
   color: white;
-  padding: 2em;
-  text-align: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem 1rem;
+  border-radius: 0 0 20px 20px;
 }
 
-header h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+.hero h1 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
 }
 
-header p {
-  font-size: 1.2em;
-  margin-bottom: 1.5em;
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
 }
 
-header .btn {
-  padding: 0.8em 1.5em;
-  background-color: #fff;
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.7rem 1.5rem;
+  background: white;
   color: #1c6bcd;
-  border-radius: 50px;
+  border-radius: 30px;
+  text-decoration: none;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: none;
   transition: 0.3s;
 }
 
-header .btn:hover {
-  background-color: #1c6bcd;
-  color: #fff;
+.btn:hover {
+  background: #1c6bcd;
+  color: white;
 }
 
-/* Section Styles */
+/* Sections */
 section {
-  padding: 2em;
-  margin: 2em 0;
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 section h2 {
-  font-size: 2em;
-  margin-bottom: 1em;
-  color: #333;
-  border-bottom: 3px solid #4a90e2;
-  padding-bottom: 0.3em;
+  color: #1c6bcd;
+  border-bottom: 2px solid #4a90e2;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
-ul {
+.skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
   list-style: none;
   padding: 0;
 }
 
-ul li {
-  padding-left: 1.5em;
-  position: relative;
-}
-
-ul li::before {
-  content: '✔';
-  position: absolute;
-  left: 0;
+.skills li {
+  background: #e0ecff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
   color: #1c6bcd;
+  font-weight: 500;
 }
 
+/* Job/Education */
 .job, .edu-item {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 .job h3, .edu-item h3 {
-  font-size: 1.5em;
-  color: #1c6bcd;
-  margin-bottom: 0.5em;
-}
-
-.job p, .edu-item p {
-  color: #777;
-  font-size: 1.1em;
-}
-
-.job ul, .edu-item ul {
-  padding-left: 1.5em;
-  margin-top: 0.5em;
-}
-
-/* Skills Section */
-.skills ul {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1em;
-}
-
-.skills li {
-  background-color: #f0f0f0;
-  padding: 1em;
-  border-radius: 8px;
-  text-align: center;
-  font-size: 1.2em;
-  color: #555;
-  transition: 0.3s;
-}
-
-.skills li:hover {
-  background-color: #4a90e2;
-  color: #fff;
-}
-
-/* Contact Section */
-.contact a {
   color: #4a90e2;
 }
 
-.contact a:hover {
-  color: #1c6bcd;
+.job ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
 }
 
-.contact p {
-  font-size: 1.1em;
-  color: #333;
+.job li {
+  margin-bottom: 0.5rem;
+  list-style: disc;
+}
+
+/* Contact & Social */
+.contact a {
+  color: #1c6bcd;
+  text-decoration: none;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  color: #4a90e2;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1c6bcd;
 }
 
 /* Footer */
 footer {
   text-align: center;
-  padding: 1em;
-  background-color: #333;
-  color: #fff;
-  font-size: 1em;
+  padding: 1rem;
+  background: #1c6bcd;
+  color: white;
+  font-size: 0.9rem;
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive */
 @media (max-width: 768px) {
-  header h1 {
-    font-size: 2em;
-  }
-
-  header p {
-    font-size: 1.1em;
-  }
-
-  section {
-    padding: 1.5em;
-  }
-
-  section h2 {
-    font-size: 1.8em;
-  }
-
-  .skills ul {
-    grid-template-columns: 1fr;
-  }
-
-  .skills li {
-    font-size: 1.1em;
-  }
-}
+  .hero h1 {
+    font-size: 
