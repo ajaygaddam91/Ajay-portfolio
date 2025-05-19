@@ -18,23 +18,23 @@
   </header>
 
   <!-- Navigation Tabs -->
-  <nav class="navbar">
+  <nav class="tabs">
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" class="tab-button" data-tab="about">About</a></li>
+      <li><a href="#" class="tab-button" data-tab="skills">Skills</a></li>
+      <li><a href="#" class="tab-button" data-tab="experience">Experience</a></li>
+      <li><a href="#" class="tab-button" data-tab="education">Education</a></li>
+      <li><a href="#" class="tab-button" data-tab="contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Sections -->
-  <section id="about" class="about">
+  <!-- Tabs Content -->
+  <section id="about" class="tab-content">
     <h2>About Me</h2>
     <p>Experienced cloud DevOps professional with 4.5 years of expertise in Azure, DevOps, and infrastructure. Achieved seamless Git-Ansible integration, optimized CI/CD, automated deployments, and reduced release times by 30%.</p>
   </section>
 
-  <section id="skills" class="skills">
+  <section id="skills" class="tab-content">
     <h2>Skills</h2>
     <ul>
       <li>Azure / AWS</li>
@@ -44,9 +44,8 @@
     </ul>
   </section>
 
-  <section id="experience" class="experience">
+  <section id="experience" class="tab-content">
     <h2>Experience</h2>
-
     <div class="job">
       <h3>Cloud Engineer</h3>
       <p><strong>LTIMindtree Ltd</strong> - Seattle, WA | <em>Jan 2024 - Present</em></p>
@@ -56,41 +55,17 @@
         <li>Provisioned with Terraform and scripted automations via PowerShell and AWS CLI.</li>
       </ul>
     </div>
-
-    <div class="job">
-      <h3>Cloud Engineer</h3>
-      <p><strong>Reacredence IT Solutions</strong> - North Carolina | <em>May 2020 - Dec 2021</em></p>
-      <ul>
-        <li>Developed CI/CD pipelines using Azure DevOps and Docker.</li>
-        <li>Managed Azure VMs, AWS EC2, App Services and DR tools.</li>
-        <li>Improved deployments by 20% using containerization.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <h3>Senior Analyst</h3>
-      <p><strong>HCL Technologies</strong> - India | <em>Jul 2019 – Feb 2022</em></p>
-      <ul>
-        <li>Automated patching with Jenkins, cutting manual work by 40%.</li>
-        <li>Conducted Git training, boosting adoption by 25%.</li>
-        <li>Integrated Git with Ansible, reducing incidents by 15%.</li>
-      </ul>
-    </div>
   </section>
 
-  <section id="education" class="education">
+  <section id="education" class="tab-content">
     <h2>Education</h2>
     <div class="edu-item">
       <h3>Master of Science in Data Science</h3>
       <p><strong>Saint Peter’s University</strong> - New Jersey | <em>Feb 2022 – Aug 2023</em></p>
     </div>
-    <div class="edu-item">
-      <h3>Bachelor of Technology in Computer Science</h3>
-      <p><strong>MallaReddy Engineering College</strong> | <em>Aug 2015 – Apr 2019</em></p>
-    </div>
   </section>
 
-  <section id="contact" class="contact">
+  <section id="contact" class="tab-content">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:ajaynetha5319@gmail.com">ajaynetha5319@gmail.com</a></p>
     <p>Phone: +1 (848) 218-0508</p>
@@ -103,6 +78,27 @@
   <footer>
     <p>© 2025 Ajay Gaddam. All rights reserved.</p>
   </footer>
+
+  <script>
+    // JavaScript to toggle the tab content
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', (e) => {
+        const tabId = e.target.getAttribute('data-tab');
+        
+        // Hide all tabs
+        tabContents.forEach(content => content.style.display = 'none');
+        
+        // Show the clicked tab
+        document.getElementById(tabId).style.display = 'block';
+      });
+    });
+
+    // Default tab to show
+    document.getElementById('about').style.display = 'block';
+  </script>
 
 </body>
 </html>
