@@ -2,81 +2,106 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ajay Gaddam | Cloud DevOps Engineer</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajay Gaddam | Portfolio</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Hero Section -->
+  <!-- Header -->
   <header class="hero">
-    <img src="images/profile.jpg" alt="Ajay Gaddam" class="profile-pic" />
+    <img src="images/profile.jpg" alt="Ajay Gaddam" class="profile-pic">
     <h1>Ajay Gaddam</h1>
     <p>Cloud DevOps Engineer</p>
-    <a href="Ajay_Gaddam_Resume.pdf" class="btn" download>Download Resume</a>
+    <a href="Ajay Gaddam Resume.pdf" class="btn" download>Download Resume</a>
   </header>
 
-  <!-- Tabs Section (Responsive) -->
-  <section class="tabs-container">
-    <div class="tabs">
-      <button class="tab-btn" onclick="showTab('about')">About Me</button>
-      <button class="tab-btn" onclick="showTab('skills')">Skills</button>
-      <button class="tab-btn" onclick="showTab('experience')">Experience</button>
-      <button class="tab-btn" onclick="showTab('education')">Education</button>
-      <button class="tab-btn" onclick="showTab('contact')">Contact</button>
+  <!-- Navigation Tabs -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sections -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>Experienced cloud DevOps professional with 4.5 years of expertise in Azure, DevOps, and infrastructure. Achieved seamless Git-Ansible integration, optimized CI/CD, automated deployments, and reduced release times by 30%.</p>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Azure / AWS</li>
+      <li>Jenkins / Terraform / Ansible</li>
+      <li>Docker / Kubernetes</li>
+      <li>Git / GitHub / GitHub Actions</li>
+    </ul>
+  </section>
+
+  <section id="experience" class="experience">
+    <h2>Experience</h2>
+
+    <div class="job">
+      <h3>Cloud Engineer</h3>
+      <p><strong>LTIMindtree Ltd</strong> - Seattle, WA | <em>Jan 2024 - Present</em></p>
+      <ul>
+        <li>Supported Microsoft Azure IaaS clients with 97% satisfaction rating.</li>
+        <li>Automated deployments with Docker, Kubernetes, Jenkins, and Azure.</li>
+        <li>Provisioned with Terraform and scripted automations via PowerShell and AWS CLI.</li>
+      </ul>
     </div>
 
-    <div class="tab-content">
-      <div id="about" class="tab-content-item">
-        <h2>About Me</h2>
-        <p>Experienced cloud DevOps professional with expertise in Azure, AWS, Jenkins, and more...</p>
-      </div>
-      <div id="skills" class="tab-content-item">
-        <h2>Skills</h2>
-        <ul>
-          <li>Azure, AWS</li>
-          <li>Jenkins, Terraform, Ansible</li>
-          <li>Docker, Kubernetes</li>
-          <li>Git, GitHub, GitHub Actions</li>
-        </ul>
-      </div>
-      <div id="experience" class="tab-content-item">
-        <h2>Experience</h2>
-        <p>Details about my professional experience in DevOps and Cloud technologies...</p>
-      </div>
-      <div id="education" class="tab-content-item">
-        <h2>Education</h2>
-        <p>Master of Science in Data Science - Saint Peter's University, New Jersey.</p>
-      </div>
-      <div id="contact" class="tab-content-item">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:ajaynetha5319@gmail.com">ajaynetha5319@gmail.com</a></p>
-        <p>Phone: +1 (848) 218-0508</p>
-      </div>
+    <div class="job">
+      <h3>Cloud Engineer</h3>
+      <p><strong>Reacredence IT Solutions</strong> - North Carolina | <em>May 2020 - Dec 2021</em></p>
+      <ul>
+        <li>Developed CI/CD pipelines using Azure DevOps and Docker.</li>
+        <li>Managed Azure VMs, AWS EC2, App Services and DR tools.</li>
+        <li>Improved deployments by 20% using containerization.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <h3>Senior Analyst</h3>
+      <p><strong>HCL Technologies</strong> - India | <em>Jul 2019 – Feb 2022</em></p>
+      <ul>
+        <li>Automated patching with Jenkins, cutting manual work by 40%.</li>
+        <li>Conducted Git training, boosting adoption by 25%.</li>
+        <li>Integrated Git with Ansible, reducing incidents by 15%.</li>
+      </ul>
     </div>
   </section>
 
-  <!-- Footer Section -->
+  <section id="education" class="education">
+    <h2>Education</h2>
+    <div class="edu-item">
+      <h3>Master of Science in Data Science</h3>
+      <p><strong>Saint Peter’s University</strong> - New Jersey | <em>Feb 2022 – Aug 2023</em></p>
+    </div>
+    <div class="edu-item">
+      <h3>Bachelor of Technology in Computer Science</h3>
+      <p><strong>MallaReddy Engineering College</strong> | <em>Aug 2015 – Apr 2019</em></p>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:ajaynetha5319@gmail.com">ajaynetha5319@gmail.com</a></p>
+    <p>Phone: +1 (848) 218-0508</p>
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/ajay-g-a7ab03131/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/ajaygaddam91" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+  </section>
+
   <footer>
     <p>© 2025 Ajay Gaddam. All rights reserved.</p>
   </footer>
-
-  <script>
-    // Function to switch tabs
-    function showTab(tabId) {
-      // Hide all content sections
-      const allTabs = document.querySelectorAll('.tab-content-item');
-      allTabs.forEach(tab => tab.style.display = 'none');
-
-      // Show the clicked tab content
-      document.getElementById(tabId).style.display = 'block';
-    }
-
-    // By default, show the "About Me" tab when the page loads
-    document.addEventListener("DOMContentLoaded", function() {
-      showTab('about');
-    });
-  </script>
-
 </body>
 </html>
